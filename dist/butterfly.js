@@ -72,9 +72,9 @@ require = (function (modules, cache, entry) {
   // Override the current require with this new one
   return newRequire;
 })({9:[function(require,module,exports) {
-module.exports="/dist/fb7899bbd06c4eb5eeb01415933cf312.gif";
+module.exports="./fb7899bbd06c4eb5eeb01415933cf312.gif";
 },{}],10:[function(require,module,exports) {
-module.exports="/dist/d426cfb94b190cfb1f06628b001b6749.gif";
+module.exports="./d426cfb94b190cfb1f06628b001b6749.gif";
 },{}],3:[function(require,module,exports) {
 'use strict';
 
