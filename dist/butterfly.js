@@ -126,13 +126,19 @@ var Butterfly = function () {
     return Butterfly;
 }();
 
-var timer = setInterval(function () {
+window.onload = function() {
+
+  var timer = setInterval(function () {
     if (counter++ < 50) {
         new Butterfly();
     } else {
         clearInterval(timer);
     }
-}, 1000);
+  }, 1000);
+  
+}
+
+
 },{"./butterfly-1.gif":9,"./butterfly-2.gif":10}],13:[function(require,module,exports) {
 
 var global = (1, eval)('this');
