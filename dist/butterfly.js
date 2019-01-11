@@ -71,9 +71,9 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({7:[function(require,module,exports) {
+})({9:[function(require,module,exports) {
 module.exports="/dist/fb7899bbd06c4eb5eeb01415933cf312.gif";
-},{}],8:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 module.exports="/dist/d426cfb94b190cfb1f06628b001b6749.gif";
 },{}],3:[function(require,module,exports) {
 'use strict';
@@ -133,7 +133,7 @@ var timer = setInterval(function () {
         clearInterval(timer);
     }
 }, 1000);
-},{"./butterfly-1.gif":7,"./butterfly-2.gif":8}],10:[function(require,module,exports) {
+},{"./butterfly-1.gif":9,"./butterfly-2.gif":10}],13:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -155,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51044' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53624' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -256,5 +256,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[10,3])
+},{}]},{},[13,3])
 //# sourceMappingURL=/dist/butterfly.map
