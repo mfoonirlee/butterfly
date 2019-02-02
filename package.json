@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/mfoonirlee/butterfly/issues"
   },
-  "homepage": "https://github.com/mfoonirlee/butterfly#readme"
+  "homepage": "https://github.com/mfoonirlee/butterfly#readme",
+  "dependencies": {
+    "autoprefixer": "^9.4.7",
+    "postcss-modules": "^1.4.1"
+  }
 }
