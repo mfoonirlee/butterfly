@@ -14,7 +14,7 @@ body,html{
 .txt{
     display: inline-block;
     position: relative;
-    text-shadow: 0 0 3px #ccc;
+    text-shadow: 0 0 1px #ccc;
 }
 .img{
     width: 100%;
@@ -25,6 +25,17 @@ body,html{
     bottom: 20px;
     font-size: 24px;
     animation: upIn 3s forwards;
+}
+.fadeOut{
+    animation: fadeOut 6s forwards;
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
 }
 .mask{
     left: 0;

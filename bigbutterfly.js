@@ -13,10 +13,11 @@ function randomInt(max, min = 1){
 }
 
 export default class BigButterfly{
-    constructor(top, left){
-        const divContainer = document.createElement('div');
-        divContainer.className = `butterfly${randomInt(8)}`;
-        divContainer.innerHTML = `<span class="butterflyOuter transitionSlow" style="left:${left};top:${top}"><span class="butterflyInner transition color${randomInt(5)}"></span></span>`;
-        document.body.appendChild(divContainer);        
+    constructor(){
+        const div = document.createElement('div'); 
+        div.className = `butterfly${randomInt(2)}`;
+        div.innerHTML = `<span class="butterflyOuter transitionSlow"><span class="butterflyInner transition color${randomInt(5)}"></span></span><i class="tmask"></i>`;
+
+        document.body.appendChild(div); 
     }
 }

@@ -50,9 +50,10 @@ class TypingPrinter {
     genTimeFn(){
         const res = [];
         for (let i = 0, len = this.splitArr.length; i < len; i++) {
-            res.push({ fn: this.genHTML.bind(this, this.splitArr[i]), time: 0, type: 0 });
+            res.push({ fn: this.genHTML.bind(this, this.splitArr[i]), time: i != 0 ? 3000 : 0, type: 0 });
             if (i != len - 1){
-                res.push({ fn: this.removePrev.bind(this), time: this.splitArr[i].length * 100 + 3000, type: 1 });
+                // spliter
+                res.push({ fn: this.removePrev.bind(this), time: this.splitArr[i].length * 100 + 1000, type: 1 });
             }
         }
         return res;
@@ -81,8 +82,9 @@ class TypingPrinter {
     removePrev(){
         const list = document.getElementsByClassName('txt-wrapper');
         const firstDom = list && list[0];
-        firstDom.remove();
-        new BigBf(randomInt(90,10) + '%', randomInt(10, 90) + '%');
+        firstDom.className = `${firstDom.className} fadeOut`;
+        new BigBf;
+        setTimeout(()=>{ firstDom.remove() }, 2800); 
     }
 }
 
@@ -91,9 +93,11 @@ const fns = new TypingPrinter(txt);
 let start = Date.now();
 let bCount = 0;
 
-console.log(fns);
+// new BigBf;
+
+// console.log(fns);
 window.onload = function() {
-    setInterval(() => {
+    const timer = setInterval(() => {
         const now = Date.now();
         
         if (fns[index] && fns[index].time < now - start) {
@@ -113,6 +117,7 @@ window.onload = function() {
         dom.innerHTML = 'End.';
         dom.className = 'end';
         document.body.appendChild(dom);
+        clearInterval(timer);
     }, 254000)
     // }, 1000);
     

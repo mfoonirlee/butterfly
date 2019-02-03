@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "buildI": "parcel build index.html --public-url /butterfly/",
+    "buildA": "parcel build aimer.html --public-url /butterfly/"
   },
   "repository": {
     "type": "git",
