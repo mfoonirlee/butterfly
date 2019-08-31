@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({9:[function(require,module,exports) {
+})({14:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],5:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,13 +132,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":9}],2:[function(require,module,exports) {
+},{"./bundle-url":14}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./rancho-regular-webfont.woff":6,"./rancho-regular-webfont.woff2":7,"_css_loader":5}],10:[function(require,module,exports) {
+},{"./rancho-regular-webfont.woff":12,"./rancho-regular-webfont.woff2":13,"_css_loader":11}],19:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -160,7 +160,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49841' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58275' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -261,7 +261,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}],12:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -340,7 +340,7 @@ LazyPromise.prototype.then = function (onSuccess, onError) {
 LazyPromise.prototype.catch = function (onError) {
   return this.promise || (this.promise = new Promise(this.executor).catch(onError));
 };
-},{"./bundle-url":9}],0:[function(require,module,exports) {
-var b=require(12);b.load([["5c4d38282d732e486b39f0a415af5813.woff",6],["620c345a0fff541a1e8bb24e2dabeee2.woff2",7]]);
-},{}]},{},[10,0])
+},{"./bundle-url":14}],0:[function(require,module,exports) {
+var b=require(21);b.load([["5c4d38282d732e486b39f0a415af5813.woff",12],["620c345a0fff541a1e8bb24e2dabeee2.woff2",13]]);
+},{}]},{},[19,0])
 //# sourceMappingURL=/dist/ecf5460bf6472cfd905a00200c31cff3.map
